@@ -143,7 +143,7 @@ class MyLinkedList:
         self.size += 1
 
     def addAtIndex(self, index: int, val: int) -> None:
-        if index < 0:
+        if index < 0: #错误，少考虑等于0的情况 应改为： if index < 0 or index == 0:
             self.addAtHead(val)
         elif index == self.size:
             self.addAtTail(val)
